@@ -67,6 +67,8 @@ async function search() {
     container.style.display = "none";
   });
 
+  chatMessages.innerHTML += '<div class="chat-message"><span class="user-message">' + searchTerm + '</span></div>';
+
   const categories = [
     { name: "boeken", facet: "&facet=type(book)&refine=true" },
     { name: "dvds", facet: "&facet=type(movie)&refine=true" },
@@ -83,14 +85,21 @@ async function search() {
       document.getElementById(category.name + "Container").style.display = "none";
     }
   }
+
+  chatMessages.innerHTML += '<div class="chat-message"><span class="bot-message">Hier zijn de resultaten van je zoekvraag voor "' + searchTerm + '". Kan ik nog iets voor je zoeken?</span></div>';
+  chatBody.scrollTop = chatBody.scrollHeight;
 }
 
-document.getElementById("searchButton").addEventListener("click", (event) => {
-  event.preventDefault();
+document.getElementById("searchButton").addEventListener("click", () => {
   search();
+  document.getElementById("searchTerm").value = '';
 });
 
 const categoryContainers = document.querySelectorAll(".category-container");
 categoryContainers.forEach((container) => {
   container.style.display = "none";
 });
+
+const chatMessages = document.getElementById('chatMessages');
+const chatBody = document.querySelector('.chat-body');
+
