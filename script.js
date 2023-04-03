@@ -2,8 +2,6 @@ const api_url_base = "https://cors-anywhere.herokuapp.com/https://zoeken.oba.nl/
 const api_key = "&authorization=76f45dfa187d66be5fd6af05573eab04";
 const api_output = "&output=json";
 
-let searchResults = [];
-
 async function getResults(searchTerm, facet = "") {
   const api_url = api_url_base + searchTerm + facet + api_key + api_output;
 
@@ -69,6 +67,8 @@ async function search() {
     container.style.display = "none";
   });
 
+  chatMessages.innerHTML += '<div class="chat-message"><span class="user-message">' + searchTerm + '</span></div>';
+
   const categories = [
     { name: "boeken", facet: "&facet=type(book)&refine=true" },
     { name: "dvds", facet: "&facet=type(movie)&refine=true" },
@@ -76,40 +76,29 @@ async function search() {
     { name: "cursussen", facet: "%20table:jsonsrc&refine=true" },
   ];
 
-  let responseMessage = `Onderstaande resultaten gevonden voor "${searchTerm}":<br>`;
-
   for (const category of categories) {
     const results = await getResults(searchTerm, category.facet);
     if (results.length > 0) {
-      responseMessage += `<br><b>${category.name}</b>:<br>`;
-      for (const result of results) {
-        let detailLink = result.detailLink;
-        if (!detailLink) {
-          detailLink = result.detaillink;
-        }
-        responseMessage += `<a href="${detailLink.replace(
-          "http:",
-          "https:"
-        )}" target="_blank">${result.titles[0]}</a><br>`;
-      }
+      showResults(category.name, results);
       document.getElementById(category.name + "Container").style.display = "block";
     } else {
       document.getElementById(category.name + "Container").style.display = "none";
     }
   }
 
-  const chatMessages = document.getElementById("chatMessages");
-  const obaMessage = createMessageElement(
-    "OBAbot",
-    responseMessage + "Kan ik nog iets voor je vinden?"
-  );
-  chatMessages.appendChild(obaMessage);
-
-  document.getElementById("searchTerm").value = "";
+  chatMessages.innerHTML += '<div class="chat-message"><span class="bot-message">Hier zijn de resultaten van je zoekvraag voor "' + searchTerm + '". Kan ik nog iets voor je zoeken?</span></div>';
+  chatBody.scrollTop = chatBody.scrollHeight;
 }
 
+document.getElementById("searchButton").addEventListener("click", () => {
+  search();
+  document.getElementById("searchTerm").value = '';
+});
 
+const categoryContainers = document.querySelectorAll(".category-container");
+categoryContainers.forEach((container) => {
+  container.style.display = "none";
+});
 
 const chatMessages = document.getElementById('chatMessages');
 const chatBody = document.querySelector('.chat-body');
-
