@@ -85,7 +85,7 @@ async function search() {
   }
 }
 
-document.getElementById("searchForm").addEventListener("submit", (event) => {
+document.getElementById("searchButton").addEventListener("click", (event) => {
   event.preventDefault();
   search();
 });
