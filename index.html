@@ -17,39 +17,39 @@
       </nav>
       <img src="oba-logo.png" alt="OBA Logo" id="oba-logo" />
     </header>
-<div class="main-container">
-    <div class="chat-container">
-      <div class="chat-header">
-        <h1>OBAbot</h1>
-        <p>Welkom bij de OBA. Dit is de OBAbot en ik help je met het zoeken naar boeken, dvd's, activiteiten, cursussen en informatie over de OBA. Waarmee kan ik je helpen?</p>
+    <div class="main-container">
+      <div class="chat-container">
+        <div class="chat-header">
+          <h1>OBAbot</h1>
+          <p>Welkom bij de OBA. Dit is de OBAbot en ik help je met het zoeken naar boeken, dvd's, activiteiten, cursussen en informatie over de OBA. Waarmee kan ik je helpen?</p>
+        </div>
+        <div class="chat-body">
+          <div class="chat-messages" id="chatMessages"></div>
+        </div>
       </div>
-      <div class="chat-body">
-        <div class="chat-messages" id="chatMessages"></div>
-        <div class="chat-input">
-          <input type="text" id="searchTerm" placeholder="Typ hier je vraag of zoekterm..." />
-          <button type="button" id="searchButton">Zoeken</button>
+      <div class="categories">
+        <div class="category-container" id="boekenContainer">
+          <h2>boeken</h2>
+          <div class="results-container" id="boekenResults"></div>
+        </div>
+        <div class="category-container" id="dvdsContainer">
+          <h2>dvd's</h2>
+          <div class="results-container" id="dvdsResults"></div>
+        </div>
+        <div class="category-container" id="activiteitenContainer">
+          <h2>activiteiten</h2>
+          <div class="results-container" id="activiteitenResults"></div>
+        </div>
+        <div class="category-container" id="cursussenContainer">
+          <h2>cursussen</h2>
+          <div class="results-container" id="cursussenResults"></div>
         </div>
       </div>
     </div>
-    <div class="categories">
-      <div class="category-container" id="boekenContainer">
-        <h2>boeken</h2>
-        <div class="results-container" id="boekenResults"></div>
-      </div>
-      <div class="category-container" id="dvdsContainer">
-        <h2>dvd's</h2>
-        <div class="results-container" id="dvdsResults"></div>
-      </div>
-      <div class="category-container" id="activiteitenContainer">
-        <h2>activiteiten</h2>
-        <div class="results-container" id="activiteitenResults"></div>
-      </div>
-      <div class="category-container" id="cursussenContainer">
-        <h2>cursussen</h2>
-        <div class="results-container" id="cursussenResults"></div>
-      </div>
+    <div class="chat-input">
+      <input type="text" id="searchTerm" placeholder="Typ hier je vraag of zoekterm..." />
+      <button type="button" id="searchButton">Zoeken</button>
     </div>
-</div>
     <script src="script.js"></script>
   </body>
 </html>
