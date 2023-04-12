@@ -87,8 +87,6 @@ nav ul li a:hover {
   align-items: flex-end;
   margin-top: 10px;
   background-color: #ffffff
-  max-width: calc(70% + 10px);
-  min-height: calc(100% + 10px);
 }
 
 .chat-message.user span.message-text {
@@ -97,6 +95,8 @@ nav ul li a:hover {
   border-radius: 15px;
   padding: 10px;
   margin: 10;
+  max-width: calc(70% + 10px);
+  min-height: calc(100% + 10px);
   word-wrap: break-word;
 }
 
@@ -127,14 +127,14 @@ nav ul li a:hover {
 
 .result-item {
   margin: 10px;
-  max-width: 100px;
-  max-height: 150px;
+  max-width: 150px;
+  max-height: 225px;
   overflow: hidden;
 }
 
 .result-item img {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 75%;
+  max-height: 75%;
   object-fit: contain;
 }
 
