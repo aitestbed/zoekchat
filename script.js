@@ -68,7 +68,8 @@ async function search() {
     container.style.display = "none";
   });
 
-  chatMessages.innerHTML += '<div class="chat-message"><span class="user-message">' + searchTerm + '</span></div>';
+  chatMessages.innerHTML += '<div class="chat-message user"><span>' + searchTerm + '</span></div>';
+
 
   const categories = [
     { name: "boeken", facet: "&facet=type(book)&refine=true" },
@@ -87,7 +88,8 @@ async function search() {
     }
   }
 
-  chatMessages.innerHTML += '<div class="chat-message"><span class="bot-message">Hier zijn de resultaten van je zoekvraag voor "' + searchTerm + '". Kan ik nog iets voor je zoeken?</span></div>';
+ chatMessages.innerHTML += '<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor "' + searchTerm + '". Kan ik nog iets voor je zoeken?</span></div>';
+  
   chatBody.scrollTop = chatBody.scrollHeight;
 }
 
