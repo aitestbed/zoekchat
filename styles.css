@@ -54,7 +54,8 @@ nav ul li a:hover {
 }
 
 .chat-container {
-  width: 33%;
+  height: 600px;
+  width: 25%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 10px;
