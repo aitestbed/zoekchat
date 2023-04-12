@@ -143,16 +143,16 @@ nav ul li a:hover {
 }
 
 .chat-input input {
-  border-radius: 25px;
-  width: calc(20% - 10px);
+  border-radius: 10px;
+  width: calc(17% - 10px);
   height: 50px;
   padding: 0 10px;
 }
 
 .chat-input button {
-  border-radius: 25px;
+  border-radius: 10px;
   height: 50px;
-  width: calc(10% - 10px);
+  width: calc(8% - 10px);
   margin-left: 10px;
 }
 
