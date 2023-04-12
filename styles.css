@@ -145,7 +145,7 @@ nav ul li a:hover {
 .chat-input {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   margin-top: 20px;
   width: 100%;
 }
