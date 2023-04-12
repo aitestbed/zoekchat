@@ -89,7 +89,7 @@ nav ul li a:hover {
 }
 
 .chat-message.bot span {
-  background-color: #F5F5F5;
+  background-color: #F5F5F5 !important;
   border-radius: 15px;
   padding: 10px;
   margin: 0;
@@ -103,7 +103,7 @@ nav ul li a:hover {
 }
 
 .chat-message.user span {
-  background-color: #4b0082;
+  background-color: #4b0082 !important;
   color: white;
   border-radius: 15px;
   padding: 10px;
