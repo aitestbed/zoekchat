@@ -46,7 +46,7 @@ nav ul li a:hover {
 }
 
 .chat-container {
-  height: 600px;
+  height: 700px;
   width: 25%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
@@ -108,8 +108,8 @@ nav ul li a:hover {
 }
 
 .category-container {
-  margin-bottom: 20px;
-  padding: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
   border-radius: 5px;
   width: 100%;
 }
