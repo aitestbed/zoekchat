@@ -1,5 +1,5 @@
 const api_url_base = "https://cors-anywhere.herokuapp.com/https://zoeken.oba.nl/api/v1/search/?q=";
-const api_key = "&authorization=76f45dfa187d66be5fd6af05573eab04";
+const api_key = "&authorization=d7519ea81ad4e06ab5e5dac46ddeb63a";
 const api_output = "&output=json";
 const api_pagesize = "&pagesize=5";
 
