@@ -87,6 +87,8 @@ nav ul li a:hover {
   align-items: flex-end;
   margin-top: 10px;
   background-color: #ffffff
+  max-width: calc(70% + 10px);
+  min-height: calc(100% + 10px);
 }
 
 .chat-message.user span.message-text {
@@ -95,8 +97,6 @@ nav ul li a:hover {
   border-radius: 15px;
   padding: 10px;
   margin: 10;
-  max-width: calc(70% + 10px);
-  min-height: calc(100% + 10px);
   word-wrap: break-word;
 }
 
