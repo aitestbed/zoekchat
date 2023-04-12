@@ -153,8 +153,11 @@ nav ul li a:hover {
 
 .chat-input input {
   border-radius: 25px;
+  width 80%;
+  height 50px
 }
 
 .chat-input button {
   border-radius: 25px;
+  height:50px
 }
