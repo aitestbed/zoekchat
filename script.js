@@ -32,11 +32,11 @@ function showResults(category, results) {
 
   results.forEach((result) => {
     const img = document.createElement("img");
-    img.src = result.coverimages[1] || "fallback.JPG";
+    img.src = result.coverimages[1] || "fallback.png";
     img.alt = result.titles[0];
     img.onerror = function () {
       this.onerror = null;
-      this.src = "fallback.JPG";
+      this.src = "fallback.png";
     };
 
     let detailLink = result.detailLink;
