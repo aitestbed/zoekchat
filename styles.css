@@ -1,6 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #c4ffd9, #c4ffd9 50%, #fafffd 50%, #fafffd);
+ body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    to right,
+    #4b0082 0%,
+    #7c5295 25%,
+    #9e8ba8 50%,
+    #c0c4bb 75%,
+    #ffffff 100%
+  );
+  min-height: 100vh;
+}
 }
 
 
