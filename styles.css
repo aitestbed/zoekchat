@@ -47,7 +47,11 @@ nav ul li a:hover {
 
 
 #oba-logo {
-  height: 50px; 
+  height: 0px; 
+}
+
+.main-container {
+ display: flex;
 }
 
 .chat-container {
