@@ -67,8 +67,6 @@ function showResults(category, results) {
   });
 }
 
-}
-
 async function search() {
   const searchTerm = document.getElementById("searchTerm").value.trim();
 
