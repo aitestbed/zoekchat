@@ -127,14 +127,14 @@ nav ul li a:hover {
 
 .result-item {
   margin: 10px;
-  max-width: 150px;
-  max-height: 225px;
+  max-width: 120px;
+  max-height: 180px;
   overflow: hidden;
 }
 
 .result-item img {
-  max-width: 75%;
-  max-height: 75%;
+  max-width: 60%;
+  max-height: 60%;
   object-fit: contain;
 }
 
