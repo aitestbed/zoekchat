@@ -4,7 +4,7 @@ const api_output = "&output=json";
 const api_pagesize = "&pagesize=5";
 
 async function getResults(searchTerm, facet = "") {
-  const api_url = api_url_base + searchTerm + facet + api_key + api_output;
+  const api_url = api_url_base + searchTerm + facet + api_pagesize + api_key + api_output;
 
   try {
     const response = await fetch(api_url, {
