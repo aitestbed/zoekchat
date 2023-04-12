@@ -32,11 +32,17 @@ function showResults(category, results) {
 
   results.forEach((result) => {
     const img = document.createElement("img");
-    if (result.coverimages.length > 0) {
-  img.src = result.coverimages[1] || "fallback.png";
-} else {
-  img.src = result.coverimages[0] || "fallback.png";
-}
+    let imageUrl = '';
+
+    if (result.coverimages && result.coverimages[1]) {
+      imageUrl = result.coverimages[1];
+    } else if (result.coverimages && result.coverimages[0]) {
+      imageUrl = result.coverimages[0].replace('{0}', 'l');
+    } else {
+      imageUrl = 'fallback.png';
+    }
+
+    img.src = imageUrl;
     img.alt = result.titles[0];
     img.onerror = function () {
       this.onerror = null;
@@ -59,6 +65,8 @@ function showResults(category, results) {
 
     resultsContainer.appendChild(item);
   });
+}
+
 }
 
 async function search() {
