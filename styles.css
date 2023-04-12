@@ -16,11 +16,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #ffffff;
+  background-color: transparent;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the navigation menu */
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -38,7 +37,7 @@ nav ul li:last-child {
 
 nav ul li a {
   text-decoration: none;
-  color: #4b0082;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -48,7 +47,7 @@ nav ul li a:hover {
 
 /* Style the OBA logo */
 #oba-logo {
-  height: 50px; /* Adjust the height as needed */
+  height: 50px; 
 }
 
 .chat-container {
