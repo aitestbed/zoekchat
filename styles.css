@@ -89,10 +89,11 @@ nav ul li a:hover {
 
 .chat-message.user span {
   background-color: #4b0082 !important;
+  font-size: 8px;
   color: #ffffff;
   border-radius: 15px;
   padding: 10px;
-  margin: 0;
+  margin: 10;
   max-width: 70%;
   word-wrap: break-word;
 }
