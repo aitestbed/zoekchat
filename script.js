@@ -32,7 +32,11 @@ function showResults(category, results) {
 
   results.forEach((result) => {
     const img = document.createElement("img");
-    img.src = result.coverimages[1] || "fallback.png";
+    if (result.coverimages.length > 0) {
+  img.src = result.coverimages[1] || "fallback.png";
+} else {
+  img.src = result.coverimages[0] || "fallback.png";
+}
     img.alt = result.titles[0];
     img.onerror = function () {
       this.onerror = null;
