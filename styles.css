@@ -46,22 +46,21 @@ nav ul li a:hover {
 }
 
 .chat-container {
-  height: 80vh; /* Adjust the height here, e.g., 80% of viewport height */
+  height: calc(100vh - 130px);
   width: 25%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .chat-messages {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: calc(100% - 70px);
-
+  height: calc(100% - 80px); /* Adjust the height here */
+  margin-bottom: 10px;
 }
 
 .chat-message {
