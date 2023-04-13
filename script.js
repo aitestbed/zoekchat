@@ -125,6 +125,14 @@ document.getElementById("searchButton").addEventListener("click", () => {
   document.getElementById("searchTerm").value = "";
 });
 
+document.getElementById("searchTerm").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    search();
+    document.getElementById("searchTerm").value = "";
+  }
+});
+
+
 const categoryContainers = document.querySelectorAll(".category-container");
 categoryContainers.forEach((container) => {
   container.style.display = "none";
