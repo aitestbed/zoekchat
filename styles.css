@@ -132,7 +132,7 @@ nav ul li a:hover {
 }
 
 .chat-input input {
-  border: 2px solid #00ff7f; /* fresh green border */
+  border: 2px solid #228b22; 
   border-radius: 10px;
   width: calc(80% - 10px);
   height: 50px;
@@ -140,8 +140,8 @@ nav ul li a:hover {
 }
 
 .chat-input button {
-  background-color: #00ff7f; /* fresh green button */
-  color: white; /* white letters */
+  background-color: #228b22; 
+  color: white;
   border: none;
   border-radius: 10px;
   height: 50px;
