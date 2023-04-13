@@ -96,7 +96,7 @@ async function search() {
     }
   }
 
-  chatMessages.innerHTML += '<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor "' + searchTerm + '". Kan ik nog iets voor je zoeken?</span></div>';
+chatMessages.innerHTML += '<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor <a href="#" onclick="reissueSearch(\'' + searchTerm + '\')">' + searchTerm + '</a>. Kan ik nog iets voor je zoeken?</span></div>';
 
   const keywords = ["openingstijden", "open", "geopend"];
   if (keywords.some((word) => searchTerm.toLowerCase().includes(word.toLowerCase()))) {
