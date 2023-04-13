@@ -51,6 +51,9 @@ nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .chat-messages {
@@ -141,7 +144,6 @@ nav ul li a:hover {
 .chat-input {
   display: flex;
   align-items: left;
-  margin-top: 20px;
   width: 100%;
 }
 
