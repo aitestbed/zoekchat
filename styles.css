@@ -46,7 +46,7 @@ nav ul li a:hover {
 }
 
 .chat-container {
-  height: 700px;
+  height: 80vh; /* Adjust the height here, e.g., 80% of viewport height */
   width: 25%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
@@ -60,7 +60,8 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: calc(100% - 110px);
+  height: calc(100% - 70px);
+
 }
 
 .chat-message {
@@ -127,7 +128,7 @@ nav ul li a:hover {
   display: flex;
   align-items: left;
   margin-top: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
