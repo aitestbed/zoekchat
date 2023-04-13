@@ -60,7 +60,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: 300px;
+  height: calc(100% - 70px);;
 }
 
 .chat-message {
