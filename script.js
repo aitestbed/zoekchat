@@ -86,17 +86,7 @@ async function search() {
     { name: "cursussen", facet: "%20table:jsonsrc&refine=true" },
   ];
 
-  for (const category of categories) {
-    const results = await getResults(searchTerm, category.facet);
-    if (results.length > 0) {
-      showResults(category.name, results);
-      document.getElementById(category.name + "Container").style.display = "block";
-    } else {
-      document.getElementById(category.name + "Container").style.display = "none";
-    }
-  }
 
-  chatMessages.innerHTML += '<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor "' + searchTerm + '". Kan ik nog iets voor je zoeken?</span></div>';
 
   const keywords = ["openingstijden", "open", "geopend"];
   if (keywords.some((word) => searchTerm.toLowerCase().includes(word.toLowerCase()))) {
@@ -112,6 +102,24 @@ async function search() {
   }
 
   chatBody.scrollTop = chatBody.scrollHeight;
+}
+async function search() {
+  // ... (the rest of the code remains the same)
+
+  for (const category of categories) {
+    const results = await getResults(searchTerm, category.facet);
+    if (results.length > 0) {
+      showResults(category.name, results);
+      document.getElementById(category.name + "Container").style.display = "block";
+    } else {
+      document.getElementById(category.name + "Container").style.display = "none";
+    }
+  }
+
+  const searchResultsUrl = `https://www.oba.nl/zoeken/?q=${encodeURIComponent(searchTerm)}`; // Replace with the appropriate URL for the search results page
+  chatMessages.innerHTML += `<div class="chat-message bot"><span>Hier zijn de resultaten van je zoekvraag voor <a href="${searchResultsUrl}" target="_blank">"${searchTerm}"</a>. Kan ik nog iets voor je zoeken?</span></div>`;
+
+  // ... (the rest of the code remains the same)
 }
 
 
