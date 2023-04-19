@@ -75,7 +75,7 @@ async function search() {
 
   const nlp = nlpToolkit(searchTerm);
   const processedSearchTerm = nlp;
-    .normalize()
+    .normalize();
     .out("text");
 
   categoryContainers.forEach((container) => {
