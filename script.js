@@ -73,7 +73,7 @@ async function search() {
     return;
   }
 
-  const nlp = compromise(searchTerm);
+  const nlp = nlpToolkit(searchTerm);
   const processedSearchTerm = nlp
     .normalize()
     .out("text");
