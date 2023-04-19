@@ -73,6 +73,11 @@ async function search() {
     return;
   }
 
+  const nlp = nlp(searchTerm);
+  const processedSearchTerm = nlp
+    .normalize()
+    .out("text");
+
   categoryContainers.forEach((container) => {
     container.style.display = "none";
   });
