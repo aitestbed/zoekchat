@@ -73,11 +73,6 @@ async function search() {
     return;
   }
 
-  const nlpInstance = compromise(searchTerm);
-  const processedSearchTerm = nlpInstance
-    .normalize()
-    .out("text");
-
   categoryContainers.forEach((container) => {
     container.style.display = "none";
   });
