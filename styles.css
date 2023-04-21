@@ -43,16 +43,31 @@ nav ul li a:hover {
 
 .main-container {
   display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) { /* Aanpassen voor gewenste breekpunt */
+  .main-container {
+    flex-direction: row;
+  }
 }
 
 .chat-container {
   height: calc(100vh - 130px);
-  width: 25%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) { /* Aanpassen voor gewenste breekpunt */
+  .chat-container {
+    width: 25%;
+  }
+}
+
 }
 
 .chat-messages {
