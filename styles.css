@@ -59,7 +59,8 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: calc(100% - 80px); /* Adjust the height here */
+  height: calc(100% - 30px);
+  min-height: 300px; /* Voeg een min-height toe */
   margin-bottom: 10px;
 }
 
