@@ -1,5 +1,7 @@
 body {
-  background: linear-gradient(to right, #3f87a6, #ebf8e1);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00ff7f 0%, #64c594 35%, #a8a9a3 70%, #dcdcdc 80%, #ffffff 100%);
+  min-height: 100vh;
 }
 
 header {
