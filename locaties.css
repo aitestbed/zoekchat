@@ -22,18 +22,19 @@ nav ul li {
 }
 
 .location-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   height: calc(100vh - 80px);
 }
 
 .location-buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 30px;
+  align-items: flex-start;
+  padding: 20px;
+  width: calc(100% / 3);
+  background-color: white;
 }
 
 .location-button {
@@ -52,8 +53,8 @@ nav ul li {
 }
 
 .location-embed {
-  width: 80%;
-  height: 80%;
+  width: calc(100% * 2 / 3);
+  height: 100%;
 }
 
 iframe {
