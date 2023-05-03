@@ -41,9 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const activateParams = selectedLocations.length === 0 ? allLocations : selectedLocations;
     const queryParams = new URLSearchParams();
 
+    queryParams.append('hide', 'dropdowns'); // Voeg 'hide=dropdowns' toe als query parameter
+
     if (postcode) queryParams.append('postcode', postcode);
 
-    const mapUrl = 'https://localfocuswidgets.net/6451e73d1d2b8?hide=dropdowns';
+    const mapUrl = 'https://localfocuswidgets.net/6451e73d1d2b8';
     const combinations = [];
 
     for (const location of activateParams) {
