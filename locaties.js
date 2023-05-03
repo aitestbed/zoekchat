@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const categoryParams = {
       taal: 't',
-      Geld: 'g',
+      geld: 'g',
       digitaal: 'd',
       informatiepunt: 'i',
     };
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     for (const combination of combinations) {
-      queryParams.append('activate|sa', combination);
+      queryParams.append('&activate|sa', combination);
     }
 
     return `${mapUrl}?${queryParams.toString()}`;
