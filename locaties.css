@@ -1,7 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #00ff7f 0%, #64c594 35%, #a8a9a3 70%, #dcdcdc 80%, #ffffff 100%);
-  min-height: 100vh;
+  background: linear-gradient(to right, #4b0082 0%, #20BF55 100%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -10,53 +12,66 @@ header {
   align-items: center;
   padding: 20px;
   background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  margin-right: 20px;
+nav ul li a {
+  display: block;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
-.location-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  height: calc(100vh - 80px);
+nav ul li a:hover {
+  color: #20BF55;
 }
 
-.location-buttons {
+#oba-logo {
+  height: 40px;
+}
+
+.main-container {
+  display: flex;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.filters-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding: 20px;
-  width: calc(100% / 3);
-  background-color: white;
+  border-right: 1px solid #e0e0e0;
+  width: 300px;
 }
 
-.location-button {
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #1b262c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+.filter-section {
+  margin-bottom: 20px;
 }
 
-.location-button:hover {
-  background-color: #0f4c75;
+.filter-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.location-embed {
-  width: calc(100% * 2 / 3);
+.map-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+#map {
+  width: 100%;
   height: 100%;
-}
-
-iframe {
   border: none;
 }
