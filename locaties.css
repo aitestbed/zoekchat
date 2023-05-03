@@ -4,6 +4,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -41,10 +44,11 @@ nav ul li a:hover {
 .main-container {
   display: flex;
   margin: 20px;
-  background-color: white;
+  background-color: transparent;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  flex-grow: 1;
 }
 
 .filters-container {
@@ -53,6 +57,7 @@ nav ul li a:hover {
   padding: 20px;
   border-right: 1px solid #e0e0e0;
   width: 300px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .filter-section {
