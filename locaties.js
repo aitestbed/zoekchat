@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const activateParams = selectedLocations.length === 0 ? allLocations : selectedLocations;
     const queryParams = new URLSearchParams();
 
-    queryParams.append('hide', 'dropdowns'); // Voeg 'hide=dropdowns' toe als query parameter
+    queryParams.append('hide', 'dropdowns');
 
     if (postcode) queryParams.append('postcode', postcode);
 
