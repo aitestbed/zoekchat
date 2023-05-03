@@ -15,7 +15,6 @@ header {
   align-items: center;
   padding: 20px;
   background-color: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -49,9 +48,7 @@ nav ul li a:hover {
   display: flex;
   margin: 20px;
   background-color: transparent;
-  border: 1px solid #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   flex-grow: 1;
 }
@@ -67,7 +64,6 @@ nav ul li a:hover {
 
 .filter-section {
   margin-bottom: 20px;
-  border: 1px solid #fff;
   border-radius: 10px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -82,7 +78,6 @@ nav ul li a:hover {
 .map-container {
   flex-grow: 2;
   position: relative;
-  border: 1px solid #fff;
   border-radius: 10px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.5);
