@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     for (const combination of combinations) {
-        queryParams.append('activate|sa', combination);
+      queryParams.append('activate|sa', combination);
     }
 
     for (const geoLocation of selectedGeoLocations) {
-        queryParams.append('activate|geo', geoLocation);
+      queryParams.append('activate|geo', geoLocation);
     }
 
     return `${mapUrl}?${queryParams.toString()}`;
