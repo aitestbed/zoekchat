@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (postcode) queryParams.append('postcode', postcode);
 
-    const mapUrl = 'https://localfocuswidgets.net/6451e73d1d2b8';
+    const mapUrl = 'https://localfocuswidgets.net/6452175134cf5';
     const combinations = [];
 
     for (const location of activateParams) {
