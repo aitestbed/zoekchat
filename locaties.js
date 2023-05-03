@@ -1,13 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const locationCheckboxes = document.querySelectorAll('input[name="location"]');
-  const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+  const locationCheckboxes = document.querySelectorAll('input[type="checkbox"]');
   const postcodeInput = document.getElementById('postcode');
 
   locationCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', updateMap);
-  });
-
-  categoryCheckboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', updateMap);
   });
 
@@ -15,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function generateUrl() {
     const locationParams = {
+      Centrum: 'ac',
       Noord: 'an',
       Zuid: 'az',
       Zuidoost: 'azo',
@@ -24,17 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const categoryParams = {
-      Taal: 't',
+      taal: 't',
       Geld: 'g',
-      Digitaal: 'd',
+      digitaal: 'd',
+      informatiepunt: 'i',
     };
 
     const selectedLocations = Array.from(locationCheckboxes)
-      .filter((checkbox) => checkbox.checked)
+      .filter((checkbox) => checkbox.checked && locationParams.hasOwnProperty(checkbox.value))
       .map((checkbox) => locationParams[checkbox.value]);
 
-    const selectedCategories = Array.from(categoryCheckboxes)
-      .filter((checkbox) => checkbox.checked)
+    const selectedCategories = Array.from(locationCheckboxes)
+      .filter((checkbox) => checkbox.checked && categoryParams.hasOwnProperty(checkbox.value))
       .map((checkbox) => categoryParams[checkbox.value]);
 
     const postcode = postcodeInput.value;
