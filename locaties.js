@@ -53,8 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    if (combinations.length > 0) {
+        queryParams.append('deactivate|sa', 'asa');
+    } else {
+        queryParams.append('activate|sa', 'asa');
+    }
+
     for (const combination of combinations) {
-      queryParams.append('&activate|sa', combination);
+        queryParams.append('activate|sa', combination);
     }
 
     return `${mapUrl}?${queryParams.toString()}`;
