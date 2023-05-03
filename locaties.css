@@ -1,10 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #4b0082 0%, #20BF55 100%);
+   font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #00ff7f 0%, #64c594 35%, #a8a9a3 70%, #dcdcdc 80%, #ffffff 100%);
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -14,7 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: white;
+  background-color: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
