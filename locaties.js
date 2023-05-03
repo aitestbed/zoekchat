@@ -19,6 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
       Oost: 'ao',
     };
 
+    const locationGeoParams = {
+      Centrum: 'c',
+      Noord: 'n',
+      Zuid: 'z',
+      Zuidoost: 'zo',
+      'Nieuw-West': 'nw',
+      West: 'w',
+      Oost: 'o',
+    };
+
     const categoryParams = {
       taal: 't',
       geld: 'g',
@@ -29,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedLocations = Array.from(locationCheckboxes)
       .filter((checkbox) => checkbox.checked && locationParams.hasOwnProperty(checkbox.value))
       .map((checkbox) => locationParams[checkbox.value]);
+
+    const selectedGeoLocations = Array.from(locationCheckboxes)
+      .filter((checkbox) => checkbox.checked && locationGeoParams.hasOwnProperty(checkbox.value))
+      .map((checkbox) => locationGeoParams[checkbox.value]);
 
     const selectedCategories = Array.from(locationCheckboxes)
       .filter((checkbox) => checkbox.checked && categoryParams.hasOwnProperty(checkbox.value))
@@ -45,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (postcode) queryParams.append('postcode', postcode);
 
-    const mapUrl = 'https://localfocuswidgets.net/64521d8435e0f';
+    const mapUrl = 'https://localfocuswidgets.net/6452175134cf5';
     const combinations = [];
 
     for (const location of activateParams) {
@@ -55,14 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    if (combinations.length > 0) {
-        queryParams.append('deactivate|sa', 'asa');
-    } else {
-        queryParams.append('activate|sa', 'asa');
-    }
-
     for (const combination of combinations) {
         queryParams.append('activate|sa', combination);
+    }
+
+    for (const geoLocation of selectedGeoLocations) {
+        queryParams.append('activate|geo', geoLocation);
     }
 
     return `${mapUrl}?${queryParams.toString()}`;
