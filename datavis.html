@@ -18,7 +18,7 @@
 
       for (var i = 0; i < iframes.length; i++) {
         var src = iframes[i].getAttribute("data-src");
-        src += "&activate=" + year + "&hide=dropdowns";
+        src += "&activate=" + encodeURIComponent(year) + "&hide=dropdowns";
         iframes[i].src = src;
       }
     }
