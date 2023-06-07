@@ -18,7 +18,7 @@
 
       for (var i = 0; i < iframes.length; i++) {
         var src = iframes[i].getAttribute("data-src");
-        src += "&activate=" + year;
+        src += "&activate=" + year + "&hide=dropdowns";
         iframes[i].src = src;
       }
     }
@@ -34,8 +34,8 @@
     </select>
   </div>
   <div class="iframe-container">
-    <iframe src="https://localfocuswidgets.net/6480494231b85?hide=dropdowns"></iframe>
-    <iframe src="https://localfocuswidgets.net/6480436708589?hide=dropdowns"></iframe>
+    <iframe data-src="https://localfocuswidgets.net/6480494231b85"></iframe>
+    <iframe data-src="https://localfocuswidgets.net/6480436708589"></iframe>
   </div>
 </body>
 </html>
