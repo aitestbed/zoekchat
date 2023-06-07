@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .iframe-container {
+      display: flex;
+    }
+
+    .iframe-container iframe {
+      width: 50%;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="iframe-container">
+    <iframe src="https://localfocuswidgets.net/6480494231b85?hide=dropdowns"></iframe>
+    <iframe src="https://localfocuswidgets.net/6480436708589?hide=dropdowns"></iframe>
+  </div>
+</body>
+</html>
