@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Zoeken</title>
   <style>
     .iframe-container {
       display: flex;
@@ -8,7 +12,7 @@
 
     .iframe-container iframe {
       width: 50%;
-      height: 500px;
+      height: 800px;
       border: none;
     }
   </style>
@@ -26,6 +30,19 @@
   </script>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Collectie</a></li>
+        <li><a href="locaties.html">Locaties</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="bot.html">bot</a></li>
+        <li><a href="#">datavis</a></li>
+      </ul>
+    </nav>
+    <img src="oba-logo.png" alt="OBA Logo" id="oba-logo" />
+  </header>
+
   <div>
     <select id="year-dropdown" onchange="updateFrames()">
       <option value="2020">2020</option>
