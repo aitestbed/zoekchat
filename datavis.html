@@ -11,8 +11,28 @@
       height: 500px;
     }
   </style>
+  <script>
+    function updateFrames() {
+      var year = document.getElementById("year-dropdown").value;
+      var iframes = document.getElementsByTagName("iframe");
+
+      for (var i = 0; i < iframes.length; i++) {
+        var src = iframes[i].getAttribute("data-src");
+        src += "&activate=" + year;
+        iframes[i].src = src;
+      }
+    }
+  </script>
 </head>
 <body>
+  <div>
+    <select id="year-dropdown" onchange="updateFrames()">
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+    </select>
+  </div>
   <div class="iframe-container">
     <iframe src="https://localfocuswidgets.net/6480494231b85?hide=dropdowns"></iframe>
     <iframe src="https://localfocuswidgets.net/6480436708589?hide=dropdowns"></iframe>
